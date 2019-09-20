@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import CharacterCard from './CharacterCard';
 
@@ -24,6 +25,7 @@ export default function CharacterList() {
 
   return (
     <section className='character-list'>
+      <Link to='/'>Home</Link>
       {characterList.map(character => (
         <CharacterCard character={character} key={character.id} />
       ))}

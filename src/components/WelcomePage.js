@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import rick from '../images/rick-morty.jpeg';
 import styled from 'styled-components';
 
@@ -14,7 +15,11 @@ export default function WelcomePage() {
     <Section className='welcome-page'>
       <header>
         <h1>Welcome to the ultimate fan site!</h1>
-        <img className='main-img' src={rick} alt='rick' />
+        <NavLink to='/characters'>
+          {' '}
+          characters
+          <img className='main-img' src={rick} alt='rick' />
+        </NavLink>
       </header>
     </Section>
   );
