@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 import CharacterCard from './CharacterCard';
 
 import data from '../data.json';
-console.log(data);
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+`;
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -21,14 +27,13 @@ export default function CharacterList() {
     }
     fetchData();
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, [data]);
+  }, []);
 
   return (
-    <section className='character-list'>
-      <Link to='/'>Home</Link>
+    <Container className='character-list'>
       {characterList.map(character => (
         <CharacterCard character={character} key={character.id} />
       ))}
-    </section>
+    </Container>
   );
 }

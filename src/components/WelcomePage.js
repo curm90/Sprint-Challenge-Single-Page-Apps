@@ -15,11 +15,7 @@ export default function WelcomePage() {
     <Section className='welcome-page'>
       <header>
         <h1>Welcome to the ultimate fan site!</h1>
-        <NavLink to='/characters'>
-          {' '}
-          characters
-          <img className='main-img' src={rick} alt='rick' />
-        </NavLink>
+        <img className='main-img' src={rick} alt='rick' />
       </header>
     </Section>
   );
