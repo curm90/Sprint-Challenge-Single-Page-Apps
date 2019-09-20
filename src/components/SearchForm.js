@@ -15,10 +15,17 @@ const Input = styled.section`
   }
 `;
 
-export default function SearchForm() {
+export default function SearchForm(props) {
+  const { onSearch, searchTerm } = props;
   return (
     <Input className='search-form'>
-      <input type='text' name='search' placeholder='Search' />
+      <input
+        onChange={onSearch}
+        value={searchTerm}
+        type='text'
+        name='search'
+        placeholder='Search'
+      />
     </Input>
   );
 }
