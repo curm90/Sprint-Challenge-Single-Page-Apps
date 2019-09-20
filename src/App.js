@@ -23,7 +23,6 @@ export default function App() {
   };
 
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
     function fetchData() {
       return Promise.resolve({
         data: data
@@ -32,7 +31,6 @@ export default function App() {
       });
     }
     fetchData();
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
   return (
@@ -44,8 +42,13 @@ export default function App() {
         Characters
       </Link>
       <Header />
-      <SearchForm onSearch={onSearch} searchTerm={searchTerm} />
       <Route exact path='/' component={WelcomePage} />
+      <Route
+        path='/characters'
+        render={() => (
+          <SearchForm onSearch={onSearch} searchTerm={searchTerm} />
+        )}
+      />
       <Route
         path='/characters'
         render={() => (

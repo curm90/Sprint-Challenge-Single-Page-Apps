@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Input = styled.section`
@@ -17,6 +17,7 @@ const Input = styled.section`
 
 export default function SearchForm(props) {
   const { onSearch, searchTerm } = props;
+
   return (
     <Input className='search-form'>
       <input

@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import rick from '../images/rick-morty.jpeg';
 import styled from 'styled-components';
+
+import rick from '../images/rick-morty.jpeg';
 
 const Section = styled.section`
   img {
